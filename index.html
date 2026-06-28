@@ -23,8 +23,9 @@ box-sizing:border-box;
 }
 
 html, body {
-overflow-x: hidden; /* Prevents any accidental horizontal scrolling */
+overflow-x: hidden;
 width: 100%;
+scroll-behavior: smooth; /* Smooth scrolling for nav links */
 }
 
 body{
@@ -66,6 +67,11 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:500;
+transition: color 0.3s ease;
+}
+
+nav a:hover {
+color: var(--gold);
 }
 
 .hero{
@@ -79,7 +85,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding: 120px 20px 40px 20px;
+padding: 140px 20px 40px 20px;
 }
 
 .hero-content {
@@ -90,22 +96,12 @@ flex-direction: column;
 align-items: center;
 }
 
-/* --- HERO LOGO --- */
 .hero-logo {
 width: 100%;
 max-width: 420px;
 height: auto;
-margin: 0 auto 30px auto;
+margin: 0 auto 20px auto;
 display: block;
-}
-
-.hero-content h1{
-font-family:'Playfair Display';
-font-size:84px;
-letter-spacing:4px;
-color:#D4B26A;
-margin-bottom:20px;
-word-wrap: break-word;
 }
 
 .hero-content p{
@@ -123,6 +119,12 @@ text-decoration:none;
 color:black;
 font-weight:600;
 display: inline-block;
+transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+transform: scale(1.05);
+background: #e5c37b;
 }
 
 section{
@@ -222,6 +224,7 @@ border-radius:50px;
 text-decoration:none;
 font-weight:600;
 z-index: 1000;
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* --- MOBILE RESPONSIVE FIXES --- */
@@ -235,22 +238,16 @@ z-index: 1000;
     .logo img {
         height: 65px; 
     }
-    /* Forces the grid layout to start below the header and lock components to absolute center vertical alignment */
     .hero {
-        display: grid;
-        place-items: center;
-        align-content: center;
-        padding: 80px 20px 20px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 120px 20px 40px 20px;
     }
-    /* Strips extra space and brings text up closer to the logo */
     .hero-logo {
         max-width: 280px; 
         margin-top: 0;
-        margin-bottom: -100px; 
-    }
-    .hero-content h1 {
-        font-size: 46px; 
-        letter-spacing: 2px;
+        margin-bottom: 15px; /* Fixed: Prevents text overlap */
     }
     .hero-content p {
         font-size: 15px;
@@ -342,18 +339,18 @@ ORIOLLE is dedicated to crafting world class chocolate using authentic cocoa and
 
 <section id="contact" class="contact">
 <h2 class="section-title" style="color:white;">Get In Touch</h2>
-<p>WhatsApp: <a href="https://wa.me/919749618808">+91 9749618808</a></p>
+<p>WhatsApp: <a href="https://wa.me/919749618808" target="_blank" rel="noopener">+91 9749618808</a></p>
 <br>
 <p>Email: <a href="mailto:hello.oriolle@gmail.com">hello.oriolle@gmail.com</a></p>
 <br>
-<p>Instagram: <a href="https://www.instagram.com/_oriolle_">@_oriolle_</a></p>
+<p>Instagram: <a href="https://www.instagram.com/_oriolle_" target="_blank" rel="noopener">@_oriolle_</a></p>
 </section>
 
 <footer>
 © 2026 ORIOLLE. All Rights Reserved.
 </footer>
 
-<a class="whatsapp" href="https://wa.me/919749618808">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/919749618808" target="_blank" rel="noopener">WhatsApp</a>
 
 </body>
 </html>
