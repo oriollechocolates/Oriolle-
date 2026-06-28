@@ -235,13 +235,18 @@ z-index: 1000;
     .logo img {
         height: 65px; 
     }
-    /* Shift the whole block up by reducing the top layout offset padding */
+    /* Forces the grid layout to start below the header and lock components to absolute center vertical alignment */
     .hero {
-        padding: 60px 20px 20px 20px;
+        display: grid;
+        place-items: center;
+        align-content: center;
+        padding: 80px 20px 20px 20px;
     }
+    /* Strips extra space and brings text up closer to the logo */
     .hero-logo {
         max-width: 280px; 
-        margin-bottom: -90px; 
+        margin-top: 0;
+        margin-bottom: -25px; 
     }
     .hero-content h1 {
         font-size: 46px; 
@@ -251,6 +256,7 @@ z-index: 1000;
         font-size: 15px;
         letter-spacing: 2px;
         margin-bottom: 25px;
+        margin-top: 0;
     }
     section {
         padding: 60px 5%;
