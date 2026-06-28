@@ -85,6 +85,18 @@ padding: 120px 20px 40px 20px;
 .hero-content {
 width: 100%;
 max-width: 800px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* --- HERO LOGO FIX --- */
+.hero-logo {
+width: 100%;
+max-width: 420px; /* Restricts maximum size on desktop */
+height: auto;
+margin: 0 auto 30px auto;
+display: block;
 }
 
 .hero-content h1{
@@ -223,8 +235,13 @@ z-index: 1000;
     .logo img {
         height: 45px;
     }
+    /* Scaled down beautifully for mobile viewports */
+    .hero-logo {
+        max-width: 280px; 
+        margin-bottom: 20px;
+    }
     .hero-content h1 {
-        font-size: 46px; /* Scaled down so it fits mobile screens perfectly */
+        font-size: 46px; 
         letter-spacing: 2px;
     }
     .hero-content p {
@@ -264,7 +281,6 @@ z-index: 1000;
 </div>
 </section>
     
-
 <section id="about">
 <h2 class="section-title">Our Story</h2>
 <div class="about">
