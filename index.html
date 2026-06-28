@@ -6,6 +6,8 @@
     
 <title>ORIOLLE | Premium Chocolate</title>
 <link rel="icon" type="image/png" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -24,7 +26,6 @@ box-sizing:border-box;
 
 html {
 scroll-behavior: smooth;
-/* Fixes the fixed navbar overlapping content when clicking links */
 scroll-padding-top: 100px; 
 }
 
@@ -37,6 +38,8 @@ body{
 font-family:Inter,sans-serif;
 background:#fff;
 color:#222;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
 }
 
 nav{
@@ -58,7 +61,7 @@ align-items:center;
 }
 
 .logo img{
-height:70px; /* Slightly reduced for better screen real estate */
+height:70px; 
 width:auto;
 display:block;
 }
@@ -80,7 +83,7 @@ nav a:hover {
 color: var(--gold);
 }
 
-/* --- HERO SECTION (CENTERED) --- */
+/* --- HERO SECTION --- */
 .hero{
 min-height:100vh;
 background:linear-gradient(
@@ -167,6 +170,11 @@ background:white;
 border-radius:20px;
 overflow:hidden;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition: transform 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-5px);
 }
 
 .card img{
@@ -217,6 +225,11 @@ margin-bottom: 15px;
 .contact a{
 color:var(--gold);
 text-decoration:none;
+transition: opacity 0.2s ease;
+}
+
+.contact a:hover {
+text-decoration: underline;
 }
 
 footer{
@@ -284,9 +297,9 @@ transform: scale(1.05);
 
 <body>
 
-<nav>
+<nav aria-label="Main Navigation">
 <div class="logo">
-    <img src="logo.png" alt="ORIOLLE Logo">
+    <img src="logo.png" alt="ORIOLLE Logo" width="150" height="70">
 </div>
 
 <ul>
@@ -298,7 +311,7 @@ transform: scale(1.05);
 
 <section class="hero">
 <div class="hero-content">
-<img src="logo.png" alt="Oriolle" class="hero-logo"> 
+<img src="logo.png" alt="Oriolle" class="hero-logo" width="420" height="200"> 
 <p>MADE TO SHARE, MEANT TO LOVE</p>
 <a href="#products" class="btn">Explore Collection</a>
 </div>
@@ -315,14 +328,14 @@ ORIOLLE is dedicated to crafting world class chocolate using authentic cocoa and
 <h2 class="section-title">Our Collection</h2>
 <div class="products">
 <div class="card">
-<img src="15g-product.png" alt="15g Milk Chocolate package">
+<img src="15g-product.png" alt="15g Milk Chocolate package" width="400" height="400" loading="lazy">
 <div class="card-content">
 <h3>15g Milk Chocolate</h3>
 <p>Classic Milk Chocolate with authentic cocoa.</p>
 </div>
 </div>
 <div class="card">
-<img src="45g-product.png" alt="45g Milk Chocolate package">
+<img src="45g-product.png" alt="45g Milk Chocolate package" width="400" height="400" loading="lazy">
 <div class="card-content">
 <h3>45g Milk Chocolate</h3>
 <p>Classic Milk Chocolate with authentic cocoa.</p>
@@ -367,4 +380,5 @@ ORIOLLE is dedicated to crafting world class chocolate using authentic cocoa and
 <a class="whatsapp" href="https://wa.me/919749618808" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
 
 </body>
-</html>
+    </html>
+    
