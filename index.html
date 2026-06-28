@@ -5,11 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
     
 <title>ORIOLLE | Premium Chocolate</title>
-    <link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/png" href="logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
 --gold:#D4B26A;
 --green:#0F4C3A;
@@ -21,6 +20,11 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html, body {
+overflow-x: hidden; /* Prevents any accidental horizontal scrolling */
+width: 100%;
 }
 
 body{
@@ -46,6 +50,12 @@ display:flex;
 align-items:center;
 }
 
+.logo img{
+height:60px;
+width:auto;
+display:block;
+}
+
 nav ul{
 display:flex;
 gap:35px;
@@ -57,6 +67,7 @@ color:white;
 text-decoration:none;
 font-weight:500;
 }
+
 .hero{
 min-height:100vh;
 background:linear-gradient(
@@ -68,23 +79,28 @@ display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding-top:100px;
-padding-left:20px;
-padding-right:20px;
-padding-bottom:20px;
+padding: 120px 20px 40px 20px;
+}
+
+.hero-content {
+width: 100%;
+max-width: 800px;
 }
 
 .hero-content h1{
 font-family:'Playfair Display';
-font-size:72px;
-color:white;
+font-size:84px;
+letter-spacing:4px;
+color:#D4B26A;
 margin-bottom:20px;
+word-wrap: break-word;
 }
 
 .hero-content p{
-font-size:22px;
-color:#ddd;
-margin-bottom:30px;
+font-size:20px;
+letter-spacing:3px;
+color:#F5F0E8;
+margin-bottom:35px;
 }
 
 .btn{
@@ -94,6 +110,7 @@ border-radius:40px;
 text-decoration:none;
 color:black;
 font-weight:600;
+display: inline-block;
 }
 
 section{
@@ -131,6 +148,8 @@ box-shadow:0 10px 30px rgba(0,0,0,.08);
 
 .card img{
 width:100%;
+height: auto;
+display: block;
 }
 
 .card-content{
@@ -190,26 +209,35 @@ padding:15px 22px;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-}
-.logo img{
-height:60px;
-width:auto;
-display:block;
+z-index: 1000;
 }
 
-.hero-content h1{
-font-family:'Playfair Display';
-font-size:84px;
-letter-spacing:4px;
-color:#D4B26A;
-margin-bottom:20px;
-}
-
-.hero-content p{
-font-size:20px;
-letter-spacing:3px;
-color:#F5F0E8;
-margin-bottom:35px;
+/* --- MOBILE RESPONSIVE FIXES --- */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 5%;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    .logo img {
+        height: 45px;
+    }
+    .hero-content h1 {
+        font-size: 46px; /* Scaled down so it fits mobile screens perfectly */
+        letter-spacing: 2px;
+    }
+    .hero-content p {
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    section {
+        padding: 60px 5%;
+    }
+    .section-title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
 }
 </style>
 </head>
@@ -218,7 +246,7 @@ margin-bottom:35px;
 
 <nav>
 <div class="logo">
-    <img src="logo.png" alt="ORIOLLE Logo" height="50">
+    <img src="logo.png" alt="ORIOLLE Logo">
 </div>
 
 <ul>
@@ -238,7 +266,6 @@ margin-bottom:35px;
 
 <section id="about">
 <h2 class="section-title">Our Story</h2>
-
 <div class="about">
 ORIOLLE is dedicated to crafting world class chocolate using authentic cocoa and carefully selected ingredients. Every bar is created to deliver a rich, smooth and memorable chocolate experience while maintaining simplicity, quality and elegance.
 </div>
@@ -246,97 +273,60 @@ ORIOLLE is dedicated to crafting world class chocolate using authentic cocoa and
 
 <section id="products">
 <h2 class="section-title">Our Collection</h2>
-
 <div class="products">
-
 <div class="card">
-<img src="15g-product.png">
+<img src="15g-product.png" alt="15g Milk Chocolate">
 <div class="card-content">
 <h3>15g Milk Chocolate</h3>
 <p>Classic Milk Chocolate with authentic cocoa.</p>
 </div>
 </div>
-
 <div class="card">
-<img src="45g-product.png">
+<img src="45g-product.png" alt="45g Milk Chocolate">
 <div class="card-content">
 <h3>45g Milk Chocolate</h3>
 <p>Classic Milk Chocolate with authentic cocoa.</p>
 </div>
 </div>
-
 </div>
 </section>
 
 <section>
 <h2 class="section-title">Why ORIOLLE</h2>
-
 <div class="features">
-
 <div class="feature">
 <h3>Authentic Cocoa</h3>
 <p>Real cocoa flavour with premium ingredients.</p>
 </div>
-
 <div class="feature">
 <h3>No Nasties</h3>
 <p>Simple ingredients and honest chocolate.</p>
 </div>
-
 <div class="feature">
 <h3>Crafted Carefully</h3>
 <p>Produced with attention to every detail.</p>
 </div>
-
 <div class="feature">
 <h3>Made In India</h3>
 <p>Premium chocolate proudly crafted in India.</p>
 </div>
-
 </div>
 </section>
 
 <section id="contact" class="contact">
-
-<h2 class="section-title" style="color:white;">
-Get In Touch
-</h2>
-
-<p>
-WhatsApp:
-<a href="https://wa.me/919749618808">
-+91 9749618808
-</a>
-</p>
-
+<h2 class="section-title" style="color:white;">Get In Touch</h2>
+<p>WhatsApp: <a href="https://wa.me/919749618808">+91 9749618808</a></p>
 <br>
-
-<p>
-Email:
-<a href="mailto:hello.oriolle@gmail.com">
-hello.oriolle@gmail.com
-</a>
-</p>
-
+<p>Email: <a href="mailto:hello.oriolle@gmail.com">hello.oriolle@gmail.com</a></p>
 <br>
-
-<p>
-Instagram:
-<a href="https://www.instagram.com/_oriolle_">
-@_oriolle_
-</a>
-</p>
-
+<p>Instagram: <a href="https://www.instagram.com/_oriolle_">@_oriolle_</a></p>
 </section>
 
 <footer>
 © 2026 ORIOLLE. All Rights Reserved.
 </footer>
 
-<a class="whatsapp"
-href="https://wa.me/919749618808">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/919749618808">WhatsApp</a>
 
 </body>
 </html>
